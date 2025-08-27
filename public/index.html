@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .card {
+            background: #fff;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .card-price {
+            color: #28a745;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .card-rating {
+            color: #ffc107;
+            margin: 5px 0;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .like-button {
+            font-size: 20px;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .like-button.liked {
+            color: red;
+        }
+
+        .add-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="**img**" alt="Product Image">
+        <div class="card-body">
+            <div class="card-title">**title**</div>
+            <div class="card-price">₹**price**</div>
+            <div class="card-rating">⭐ **rating**</div>
+            <div class="card-description">
+                **description**
+            </div>
+            <div class="card-actions">
+                <span class="like-button" onclick="toggleLike(this)">❤️</span>
+                <button class="add-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLike(el) {
+            el.classList.toggle('liked');
+        }
+    </script>
+
+</body>
+
+</html>
